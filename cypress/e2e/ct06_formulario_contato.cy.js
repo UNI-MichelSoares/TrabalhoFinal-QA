@@ -1,6 +1,5 @@
-describe('Funcionalidade de Contato', () => {
-
-  it('CT06 - Test Case 6: Deve enviar o formulário Contact Us com arquivo anexado', () => {
+describe('CT06 - Contact Us Form', () => {
+  it('Deve enviar o formulário Contact Us com arquivo anexado', () => {
     cy.fixture('contato').then((contato) => {
       cy.visitarURL();
       cy.acessarMenu('/contact_us');
@@ -20,5 +19,4 @@ describe('Funcionalidade de Contato', () => {
       cy.validarHomeVisivel();
     });
   });
-
 });

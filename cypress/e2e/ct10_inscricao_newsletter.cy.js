@@ -1,6 +1,5 @@
-describe('Funcionalidade de Inscrição na Newsletter', () => {
-
-  it('CT10 - Test Case 10: Deve realizar a inscrição pelo rodapé da página inicial', () => {
+describe('CT10 - Verify Subscription in home page', () => {
+  it('Deve realizar a inscrição pelo rodapé da página inicial', () => {
     const email = `inscricao.${Date.now()}@teste.com`;
 
     cy.visitarURL();
@@ -14,5 +13,4 @@ describe('Funcionalidade de Inscrição na Newsletter', () => {
       .should('be.visible')
       .and('contain', 'You have been successfully subscribed!');
   });
-
 });

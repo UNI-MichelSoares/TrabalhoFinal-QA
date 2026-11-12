@@ -1,6 +1,5 @@
-describe('Funcionalidade de Navegação', () => {
-
-  it('CT07 - Test Case 7: Deve navegar para a página de Test Cases com sucesso', () => {
+describe('CT07 - Verify Test Cases Page', () => {
+  it('Deve navegar para a página de Test Cases com sucesso', () => {
     cy.visitarURL();
     cy.acessarMenu('/test_cases');
 
@@ -8,5 +7,4 @@ describe('Funcionalidade de Navegação', () => {
     cy.contains('h2.title b', 'Test Cases').should('be.visible');
     cy.contains('Test Case 1: Register User').should('be.visible');
   });
-
 });
