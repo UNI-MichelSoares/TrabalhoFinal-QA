@@ -5,12 +5,12 @@ describe('CT06 - Contact Us Form', () => {
       cy.acessarMenu('/contact_us');
       cy.preencherFormularioContato(contato);
 
-      cy.on('window:confirm', (mensagem) => {
-        expect(mensagem).to.eq('Press OK to proceed!');
-        return true;
+      cy.window().then((janela) => {
+        cy.stub(janela, 'confirm').as('confirmacao').returns(true);
       });
       cy.get('[data-qa="submit-button"]').click();
 
+      cy.get('@confirmacao').should('have.been.calledOnceWith', 'Press OK to proceed!');
       cy.get('#contact-page .status.alert-success')
         .should('be.visible')
         .and('contain', 'Success! Your details have been submitted successfully.');

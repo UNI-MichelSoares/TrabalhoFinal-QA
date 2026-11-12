@@ -1,17 +1,7 @@
 Cypress.Commands.add('bloquearAnuncios', () => {
-    const dominiosDeAnuncio = [
-        '**googlesyndication.com/**',
-        '**doubleclick.net/**',
-        '**googleadservices.com/**',
-        '**google-analytics.com/**',
-        '**googletagmanager.com/**',
-        '**fundingchoicesmessages.google.com/**',
-        '**adtrafficquality.google/**'
-    ];
+    const dominiosDeAnuncio = /googlesyndication\.com|doubleclick\.net|googleadservices\.com|google-analytics\.com|googletagmanager\.com|fundingchoicesmessages\.google\.com|adtrafficquality\.google|googletagservices\.com|amazon-adsystem\.com|adservice\.google/;
 
-    dominiosDeAnuncio.forEach((dominio) => {
-        cy.intercept(dominio, { statusCode: 204, body: '' });
-    });
+    cy.intercept({ hostname: dominiosDeAnuncio }, { statusCode: 204, body: '' });
 })
 
 Cypress.Commands.add('visitarURL', () => {
