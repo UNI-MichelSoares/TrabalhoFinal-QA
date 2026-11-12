@@ -1,0 +1,18 @@
+{
+  "nome": "Teste Automatizado",
+  "senha": "Senha@QA2026",
+  "titulo": "Mr",
+  "diaNascimento": "15",
+  "mesNascimento": "May",
+  "anoNascimento": "1998",
+  "primeiroNome": "Teste",
+  "sobrenome": "Automatizado",
+  "empresa": "La Salle",
+  "endereco": "Rua da Qualidade, 100",
+  "complemento": "Bloco A",
+  "pais": "Canada",
+  "estado": "Ontario",
+  "cidade": "Toronto",
+  "cep": "M5V2T6",
+  "celular": "21999998888"
+}

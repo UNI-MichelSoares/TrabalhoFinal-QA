@@ -1,0 +1,22 @@
+{
+  "name": "trabalhofinal-qa",
+  "version": "1.0.0",
+  "description": "Trabalho Final de Qualidade e Teste de Software - Automação de testes do site Automation Exercise com Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "qa",
+    "automationexercise"
+  ],
+  "author": "Michel Soares, João Victor Carrete, Breno Guimarães",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^15.14.2"
+  }
+}
